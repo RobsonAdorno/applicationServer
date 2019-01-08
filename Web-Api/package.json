@@ -1,0 +1,14 @@
+{
+  "name": "web-api",
+  "version": "1.0.0",
+  "description": "Application of test in nodejs",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robson Adorno",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
