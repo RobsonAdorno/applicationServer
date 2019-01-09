@@ -1,13 +1,21 @@
 //Configuration for run the Web Server
 
 //import libs
+<<<<<<< HEAD
 var port = process.env.port || 3000;
+=======
+
+>>>>>>> f8dba1caa41dd77e6930869b38cf21aa59aadeb3
 const http = require("http");
 const express = require("express");
 
 //Basic Configuration
 
 const hostname = "127.0.0.1";
+<<<<<<< HEAD
+=======
+const port = "8081";
+>>>>>>> f8dba1caa41dd77e6930869b38cf21aa59aadeb3
 
 //Initialize the server
 const app = express();
@@ -29,7 +37,11 @@ app.use(
 
 const server = http.createServer(app);
 
+<<<<<<< HEAD
 app.listen(
+=======
+server.listen(
+>>>>>>> f8dba1caa41dd77e6930869b38cf21aa59aadeb3
     port, hostname, () => {
 
         console.log("Server listening in the http://localhost:8081");
