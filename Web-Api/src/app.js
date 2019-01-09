@@ -1,24 +1,39 @@
+//Configuration for run the Web Server
+
+//import libs
+
 const http = require("http");
-const local = ("127.0.0.1");
-const port = ("8081")
+const express = require("express");
 
-//Arrow Function =>
+//Basic Configuration
 
-const server = http.createServer(
-    (req, res) => {
+const hostname = "127.0.0.1";
+const port = "8081";
 
-        res.statusCode = 200;
-        res.setHeader("Content-Type", "text/plain");
-        res.end("Hello Word");
+//Initialize the server
+const app = express();
+
+//Set the port e use the configuration server
+
+app.set("port", port);
+
+app.use(
+
+    (req, resp, next) => {
+
+        resp.status(200).send("TESTE");
 
     }
 );
 
-server.listen(port, local, () => {
+//Build the server
 
-    console.log("Servidor ouvindo no http://localhost:8081");
-}
+const server = http.createServer(app);
 
+server.listen(
+    port, hostname, () => {
 
+        console.log("Server listening in the http://localhost:8081");
 
+    }
 );
