@@ -1,41 +1,11 @@
-//Configuration for run the Web Server
+var express = require('express');
+var app = express();
 
-//import libs
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
 
+// use port 3000 unless there exists a preconfigured port
 var port = process.env.port || 3000;
 
-const http = require("http");
-const express = require("express");
-
-//Basic Configuration
-
-const hostname = "127.0.0.1";
-
-//Initialize the server
-const app = express();
-
-//Set the port e use the configuration server
-
-app.set("port", port);
-
-app.use(
-
-    (req, resp, next) => {
-
-        resp.status(200).send("TESTE");
-
-    }
-);
-
-//Build the server
-
-const server = http.createServer(app);
-
-app.listen(
-
-    port, () => {
-
-        console.log("Server listening in the http://localhost:3000");
-
-    }
-);
+app.listen(port);
