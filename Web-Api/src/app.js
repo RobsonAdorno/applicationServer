@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.send("Teste");
 });
 
 // use port 3000 unless there exists a preconfigured port
