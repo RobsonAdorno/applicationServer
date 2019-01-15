@@ -10,8 +10,7 @@ app.set("port", port);
 
 app.use((req, resp, next) => {
 
-  resp.status(200).send("Caralho mano, eh isso msm!!")
-
+  resp.status(200).send("Conexão criada com sucesso!!");
 });
 
 const server = http.createServer(app);
